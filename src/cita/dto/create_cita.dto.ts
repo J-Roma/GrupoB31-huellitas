@@ -7,7 +7,7 @@ export class CreateCitaDTO implements ICita{
     readonly fecha: Date;
     readonly hora: string;
     readonly tipoConsulta: string;
-    readonly DesSintomas: string;
+    readonly desSintomas: string;
     readonly especie: string;
     readonly createdAt: Date
 

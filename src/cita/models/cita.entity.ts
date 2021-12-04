@@ -6,14 +6,11 @@ export class CitaEntity{
     @PrimaryGeneratedColumn()
     id: number;
     
-    @Column({unique: true})
+    @Column()
     userName: string;
 
-    @Column()
-    mes: string;
-
-    @Column()
-    dia: number;
+    @Column({ type: 'date'})
+    fecha: Date;
 
     @Column()
     hora: string;
@@ -22,7 +19,7 @@ export class CitaEntity{
     tipoConsulta: string;
 
     @Column()
-    DesSintomas: string;
+    desSintomas: string;
 
     @Column()
     especie: string;

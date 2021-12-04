@@ -4,7 +4,7 @@ import { CitaService } from './cita.service';
 import { CreateCitaDTO } from './dto/create_cita.dto';
 
 @Controller('cita')
-@UseGuards(AuthGuard())
+// @UseGuards(AuthGuard())
 export class CitaController {
     
     constructor(private readonly citaService: CitaService){}
@@ -38,7 +38,7 @@ export class CitaController {
         const cita = await this.citaService.createCita(createCitaDTO);
         
         return res.status(HttpStatus.CREATED).json({
-            message:'Cita agendada',
+            message:'Cita agendada con exito',
             data: cita
         });
     }
